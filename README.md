@@ -201,3 +201,24 @@ Inspecting Nginx logs
 Writing a basic service health check script
 Understanding basic cloud cleanup and exposure review
 ```
+## Screenshots
+
+### Security Group HTTP rule
+
+![Security Group](screenshots/security-group-redacted.png)
+
+### Public browser access
+
+![Browser public access](screenshots/browser-public-ip-redacted.png)
+
+### Docker Compose service status
+
+![Docker Compose status](screenshots/docker-compose-ps.png)
+
+### Health check script result
+
+![Health check result](screenshots/check-service-run.png)
+
+### Nginx logs
+
+![Nginx logs](screenshots/nginx-logs.png)
