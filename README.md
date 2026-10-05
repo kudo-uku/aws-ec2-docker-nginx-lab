@@ -143,48 +143,6 @@ sudo docker compose logs --tail 30 web
 ./scripts/check-service.sh
 ```
 
-## Screenshots
-
-Screenshots should be redacted before publishing.
-
-Recommended screenshots:
-
-```text
-EC2 instance page
-Security Group inbound rule
-Browser public IP access
-Docker Compose service status
-Nginx logs
-```
-
-Sensitive information should be masked before uploading:
-
-```text
-AWS account ID
-Full public IP
-Full source IP
-Private key
-Access keys
-Tokens
-```
-
-## Cleanup
-
-When the lab is finished, stop the Docker Compose service:
-
-```bash
-sudo docker compose down
-```
-
-Verify the service is stopped:
-
-```bash
-sudo docker compose ps
-```
-
-If the EC2 instance is no longer needed, stop or terminate the instance from the AWS Console.
-
-Temporary HTTP inbound rules should be removed if the service is no longer being tested.
 
 ## What I Learned
 
