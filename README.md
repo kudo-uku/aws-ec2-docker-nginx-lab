@@ -223,3 +223,47 @@ Maintaining a GitHub repository with Git add, commit, push, and pull workflow
 ### Nginx logs
 
 ![Nginx logs](screenshots/nginx-logs.png)
+
+
+## Future Improvements
+
+### Infrastructure as Code
+
+The current version of this project uses the AWS Console to manually create and configure the EC2 instance and Security Group.
+
+A future improvement is to use Terraform to manage the cloud infrastructure as code.
+
+Terraform could be used to define:
+
+- EC2 instance
+- Security Group inbound rules
+- SSH and HTTP access rules
+- Instance tags
+- Public IP output
+
+This would make the infrastructure easier to reproduce, review, version control, and automate.
+
+Current approach:
+
+```text
+AWS Console
+  -> EC2
+  -> Security Group
+  -> Manual configuration
+```
+
+Future IaC approach:
+
+```text
+Terraform files
+  -> terraform plan
+  -> terraform apply
+  -> EC2 and Security Group
+  -> Docker Compose deploymentTerraform files
+  -> terraform plan
+  -> terraform apply
+  -> EC2 and Security Group
+  -> Docker Compose deployment
+
+This project currently focuses on manual AWS EC2 deployment, Docker Compose service deployment, GitHub repository maintenance, and basic CI checks with GitHub Actions.
+```
