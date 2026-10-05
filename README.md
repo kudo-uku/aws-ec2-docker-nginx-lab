@@ -264,6 +264,7 @@ Terraform files
   -> terraform apply
   -> EC2 and Security Group
   -> Docker Compose deployment
+```
 
 This project currently focuses on manual AWS EC2 deployment, Docker Compose service deployment, GitHub repository maintenance, and basic CI checks with GitHub Actions.
-```
+
