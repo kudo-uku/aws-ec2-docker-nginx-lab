@@ -1,0 +1,37 @@
+name: Project Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  project-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show project files
+        run: |
+          pwd
+          find . -maxdepth 3 -type f | sort
+
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f compose.yaml
+          test -f html/index.html
+          test -f scripts/check-service.sh
+          test -f .gitignore
+
+      - name: Check shell script syntax
+        run: |
+          bash -n scripts/check-service.sh
+
+      - name: Check README project title
+        run: |
+          grep -i "AWS EC2 Docker Nginx" README.md
