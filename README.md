@@ -139,7 +139,7 @@ The project can be verified with:
 sudo docker compose ps
 curl http://127.0.0.1
 curl.exe http://EC2_PUBLIC_IP
-sudo docker compose logs --tail 30 web
+sudo docker compose logs --tail 7 web
 ./scripts/check-service.sh
 ```
 
