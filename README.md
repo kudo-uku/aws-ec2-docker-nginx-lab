@@ -51,6 +51,36 @@ aws-ec2-docker-nginx-lab/
 └── .gitignore
 ```
 
+## Deployment Flow
+
+```text
+[Create EC2 Ubuntu instance]
+        ↓
+[Install Docker and Docker Compose]
+        ↓
+[Create Nginx Docker Compose project]
+        ↓
+[Start Nginx container]
+        ↓
+[Verify local response with curl]
+        ↓
+[Open HTTP 80 in Security Group]
+        ↓
+[Verify public access from browser]
+        ↓
+[Check logs and service status]
+
+```
+
+## Key Files
+
+| File | Purpose |
+|---|---|
+| `compose.yaml` | Defines the Nginx Docker Compose service |
+| `html/index.html` | Custom Nginx test page |
+| `scripts/check-service.sh` | Basic service health check script |
+| `.gitignore` | Prevents sensitive files from being uploaded |
+
 ## Deployment Steps
 
 ### 1. Create the project folder
