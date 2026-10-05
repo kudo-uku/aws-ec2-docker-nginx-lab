@@ -188,6 +188,7 @@ Checking Docker Compose service status
 Inspecting Nginx logs
 Writing a basic service health check script
 Understanding basic cloud cleanup and exposure review
+Maintaining a GitHub repository with Git add, commit, push, and pull workflow
 ```
 ## Screenshots
 
