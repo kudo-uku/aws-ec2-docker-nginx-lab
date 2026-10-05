@@ -81,6 +81,18 @@ aws-ec2-docker-nginx-lab/
 | `scripts/check-service.sh` | Basic service health check script |
 | `.gitignore` | Prevents sensitive files from being uploaded |
 
+## GitHub Actions
+
+This project includes a basic GitHub Actions workflow.
+
+The workflow checks:
+
+- Required project files
+- Shell script syntax
+- README project title
+
+The goal is to practice a basic CI workflow for a cloud deployment project.
+
 ## Deployment Steps
 
 ### 1. Create the project folder
